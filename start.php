@@ -31,16 +31,19 @@ function group_requests_page_handler($page) {
 	// This way of adding the title menu item is a bit hacky but it makes
 	// sure that the item is not visible e.g. when creating a new group
 	if (in_array($page[0], array('all', 'member', 'owner'))) {
-		elgg_register_menu_item('title', array(
-			'name' => 'group_requests',
-			'text' => elgg_echo('group_requests:request'),
-			'href' => 'groups/request',
-			'link_class' => 'elgg-button elgg-button-action',
-		));
+		if (elgg_is_logged_in()) {
+			elgg_register_menu_item('title', array(
+				'name' => 'group_requests',
+				'text' => elgg_echo('group_requests:request'),
+				'href' => 'groups/request',
+				'link_class' => 'elgg-button elgg-button-action',
+			));
+		}
 	}
 
 	switch ($page[0]) {
 		case 'request':
+			gatekeeper();
 			$params['title'] = elgg_echo('group_requests:request');
 			$params['content'] = elgg_view_form('groups/request',
 				array(),
