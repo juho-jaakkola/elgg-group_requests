@@ -29,9 +29,14 @@ if ($request->save()) {
 		$admin->language
 	);
 
+	$params = array(
+		'action' => 'create',
+		'object' => $request,
+	);
+
 	// Notify administrators
 	foreach ($admins as $admin) {
-		notify_user($admin->guid, $user->guid, $subject, $message);
+		notify_user($admin->guid, $user->guid, $subject, $message, $params);
 	}
 
 	system_message(elgg_echo('group_requests:request:success'));

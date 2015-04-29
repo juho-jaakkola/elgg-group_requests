@@ -18,4 +18,16 @@ class Request extends ElggObject {
 
 		$this->attributes['subtype'] = $this::SUBTYPE;
 	}
+
+	/**
+	 * Return an URL for the request
+	 *
+	 * Requests do not have single views, so this will take user
+	 * to the list of all pending requests.
+	 *
+	 * @return string
+	 */
+	public function getURL() {
+		return 'groups/requests';
+	}
 }

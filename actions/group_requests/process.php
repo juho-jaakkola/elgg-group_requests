@@ -46,7 +46,12 @@ if ($group->save()) {
 		$user->language
 	);
 
-	notify_user($user->guid, elgg_get_site_entity()->guid, $subject, $body);
+	$params = array(
+		'action' => 'create',
+		'object' => $group,
+	);
+
+	notify_user($user->guid, elgg_get_site_entity()->guid, $subject, $body, $params);
 
 	$request->delete();
 
