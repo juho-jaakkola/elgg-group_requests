@@ -4,7 +4,7 @@ return array(
 	'group_requests:request' => 'Ano omaa ryhmää',
 	'group_requests:requests' => 'Ryhmäanomukset',
 	'group_requests:title' => 'Syötä ryhmälle nimi',
-	'group_requests:description' => 'Kerro kuka olet, ja mihin käyttäisit ryhmää',
+	'group_requests:description' => 'Kerro, kuka olet, ja mihin ryhmä on tarkoitettu',
 	'group_requests:info' => '',
 	'group_requests:request:success' => 'Anomus tallennettu. Saat ilmoituksen, kun se on käsitelty.',
 	'group_requests:request:error' => 'Anomuksen tallentaminen epäonnistui. Yritä uudelleen.',
