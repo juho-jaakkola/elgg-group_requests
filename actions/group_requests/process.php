@@ -36,6 +36,9 @@ $group->container_guid = $request->container_guid;
 $group->name = $request->title;
 
 if ($group->save()) {
+	// Besides being owner, user also needs to be a member
+	$group->join($user);
+
 	$subject = elgg_echo('group_requests:approved:title', array(), $user->language);
 	$body = elgg_echo('group_requests:approved:body',
 		array(
