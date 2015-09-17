@@ -30,7 +30,7 @@ class PageMenu {
 		$menu[] = ElggMenuItem::factory(array(
 			'name' => 'group_requests',
 			'text' => elgg_echo('group_requests:requests'),
-			'href' => 'groups/requests',
+			'href' => 'group_requests/all',
 		));
 
 		return $menu;

@@ -28,6 +28,6 @@ class Request extends ElggObject {
 	 * @return string
 	 */
 	public function getURL() {
-		return 'groups/requests';
+		return 'group_requests/all';
 	}
 }

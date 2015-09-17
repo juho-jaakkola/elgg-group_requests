@@ -17,7 +17,7 @@ $request->access_id = ACCESS_PRIVATE;
 if ($request->save()) {
 	$admins = elgg_get_admins();
 
-	$url = elgg_normalize_url('groups/requests');
+	$url = elgg_normalize_url('group_requests/all');
 
 	$subject = elgg_echo('group_requests:notification:title', array(), $admin->language);
 	$message = elgg_echo('group_requests:notification:body',
