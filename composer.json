@@ -1,0 +1,11 @@
+{
+    "name": "juho-jaakkola/elgg-group_requests",
+    "type": "elgg-plugin",
+    "require": {
+        "composer/installers": ">=1.0.8"
+    },
+    "license": "GPL-2.0",
+    "extra": {
+        "installer-name": "group_requests"
+    }
+}
