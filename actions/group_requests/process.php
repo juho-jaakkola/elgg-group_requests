@@ -34,6 +34,7 @@ $group = new ElggGroup;
 $group->owner_guid = $request->owner_guid;
 $group->container_guid = $request->container_guid;
 $group->name = $request->title;
+$group->access_id = ACCESS_PUBLIC;
 
 if ($group->save()) {
 	// Besides being owner, user also needs to be a member
