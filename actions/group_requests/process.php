@@ -21,7 +21,16 @@ if ($action == 'deny') {
 		),
 		$user->language
 	);
-	notify_user($request->owner_guid, elgg_get_site_entity()->guid, $subject, $body);
+	$summary= elgg_echo('group_requests:denied:summary',
+		array($request->title),
+		$user->language
+	);
+
+	notify_user($request->owner_guid, elgg_get_site_entity()->guid, $subject, $body, [
+		'action' => 'deny_group_request',
+		'object' => $user,
+		'summary' => $summary,
+	]);
 
 	$request->delete();
 

@@ -28,6 +28,7 @@ Voit täyttää ryhmän tiedot ja asetukset täällä:
 %s
 ',
 	'group_requests:denied:title' => 'Ryhmäanomuksesi on hylätty',
+	'group_requests:denied:summary' => 'Valitettavasti ryhmäanomuksesi "%s" on hylätty',
 	'group_requests:denied:body' => 'Hei %s
 
 Valitettavasti anomuksesi ryhmästä "%s" on hylätty.

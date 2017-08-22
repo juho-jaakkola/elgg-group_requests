@@ -28,6 +28,7 @@ Fill in the group details and settings here:
 %s
 ',
 	'group_requests:denied:title' => 'Your group request has been denied',
+	'group_requests:denied:summary' => 'Unfortunately your group request "%s" has been denied',
 	'group_requests:denied:body' => 'Hi %s
 
 Unfortunately your request for the group "%s" has been denied.
